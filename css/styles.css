@@ -22,7 +22,7 @@ html {
   src: url(../fonts/SpaceMono-Regular.woff2) format("woff2"), url(../fonts/SpaceMono-Regular.woff) format("woff"), url(../fonts/SpaceMono-Regular.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
-  font-display: auto;
+  font-display: swap;
 }
 
 @font-face {
@@ -30,7 +30,7 @@ html {
   src: url(../fonts/SpaceMono-Bold.woff2) format("woff2"), url(../fonts/SpaceMono-Bold.woff) format("woff"), url(../fonts/SpaceMono-Bold.ttf) format("truetype");
   font-weight: 700;
   font-style: normal;
-  font-display: auto;
+  font-display: swap;
 }
 
 @font-face {
@@ -38,7 +38,7 @@ html {
   src: url(../fonts/SpaceMono-Italic.woff2) format("woff2"), url(../fonts/SpaceMono-Italic.woff) format("woff"), url(../fonts/SpaceMono-Italic.ttf) format("truetype");
   font-weight: 400;
   font-style: italic;
-  font-display: auto;
+  font-display: swap;
 }
 
 @font-face {
@@ -46,7 +46,7 @@ html {
   src: url(../fonts/SpaceMono-BoldItalic.woff2) format("woff2"), url(../fonts/SpaceMono-BoldItalic.woff) format("woff"), url(../fonts/SpaceMono-BoldItalic.ttf) format("truetype");
   font-weight: 700;
   font-style: italic;
-  font-display: auto;
+  font-display: swap;
 }
 
 body {
