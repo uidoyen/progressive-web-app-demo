@@ -1,0 +1,72 @@
+Arguments: 
+  /usr/local/Cellar/node@10/10.18.1/bin/node /usr/local/bin/yarn run devssl
+
+PATH: 
+  /Users/yahya/google-cloud-sdk/bin:/usr/local/opt/node@10/bin:/usr/local/opt/node@10/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Xamarin Workbooks.app/Contents/SharedSupport/path-bin
+
+Yarn version: 
+  1.17.3
+
+Node version: 
+  10.18.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/yahya/Projects/demo-pwa/package.json: Unexpected token l in JSON at position 438
+      at JSON.parse (<anonymous>)
+      at /Users/yahya/.config/yarn/global/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/Users/yahya/.config/yarn/global/node_modules/yarn/lib/cli.js:304:30)
+      at /Users/yahya/.config/yarn/global/node_modules/yarn/lib/cli.js:315:13
+
+npm manifest: 
+  {
+    "name": "demo-pwa",
+    "version": "1.0.0",
+    "description": "A Prograssive web applicaiton demo",
+    "main": "server.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node server.js",
+      "c": "node-sass scss/styles.scss -o .|postcss styles.css -u autoprefixer -r",
+      "w": "watch 'npm run c' scss",
+      "dev": "concurrently \"npm start\" \"npm run w\"",
+      "devssl": "http-server -S -o -C "localhost+2.pem" -K "localhost+2-key.pem""
+    },
+    "author": "Hussain",
+    "license": "ISC",
+    "dependencies": {
+      "body-parser": "^1.19.0",
+      "concurrently": "^5.1.0",
+      "express": "^4.17.1",
+      "nodemon": "^2.0.2",
+      "postcss-cli": "^7.1.0",
+      "watch": "^1.0.2"
+    },
+    "devDependencies": {
+      "autoprefixer": "^9.7.4",
+      "node-sass": "^4.13.1",
+      "postcss": "^7.0.27"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/uidoyen/progressive-web-app-demo.git"
+    },
+    "keywords": [
+      "PWA",
+      "Vanilla",
+      "Js"
+    ],
+    "bugs": {
+      "url": "https://github.com/uidoyen/progressive-web-app-demo/issues"
+    },
+    "homepage": "https://github.com/uidoyen/progressive-web-app-demo#readme"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

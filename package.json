@@ -1,0 +1,53 @@
+{
+  "name": "demo-pwa",
+  "version": "1.0.0",
+  "description": "A Prograssive web applicaiton demo",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "clean": "rimraf css",
+    "compile": "node-sass --output-style=expanded --source-map=true scss/styles.scss css/styles.css",
+    "prefix": "postcss css/styles.css --use=autoprefixer --map=false --output=css/styles.css",
+    "minify": "cleancss --level=1 --source-map --source-map-inline-sources --output css/styles.min.css css/styles.css",
+    "ssl": "http-server -S -o -C 'localhost+2.pem' -K 'localhost+2-key.pem'",
+    "dev": "npm run compile -- --watch",
+    "local": "concurrently \"npm run dev\" \"npm run ssl\"",
+    "build": "npm run clean && npm run compile && npm run prefix && npm run minify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hussain",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-preset-env": "^6.7.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "clean-css-cli": "^4.3.0",
+    "concurrently": "^5.1.0",
+    "cssnano": "^4.1.10",
+    "node-sass": "^4.13.1",
+    "postcss": "^7.0.27",
+    "postcss-cli": "^7.1.0",
+    "watch": "^1.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uidoyen/progressive-web-app-demo.git"
+  },
+  "browserslist": [
+    "last 4 version"
+  ],
+  "keywords": [
+    "PWA",
+    "Vanilla",
+    "Js"
+  ],
+  "bugs": {
+    "url": "https://github.com/uidoyen/progressive-web-app-demo/issues"
+  },
+  "homepage": "https://github.com/uidoyen/progressive-web-app-demo#readme"
+}
