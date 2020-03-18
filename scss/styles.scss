@@ -239,12 +239,11 @@ ol {
 
     li {
       font-size: 3.4rem;
-      color: #0f1622;
       padding: 15px 0;
       text-align: center;
 
       a {
-        color: #0f1622;
+        color: #fff;
       }
     }
   }
@@ -315,18 +314,66 @@ ol {
     object-fit: cover;
   }
 }
+.addToHome {
+  background-color: white;
+  box-shadow: 0 0 5px rgba(57, 70, 78, 0.2);
+  padding: 30px;
+  position: fixed;
+  bottom: 1px;
+  left: 1px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.3s;
+  .logo {
+    display: flex;
 
+    &__icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 64px;
+      height: 64px;
+      margin-right: 10px;
+      border-radius: 100%;
+      background-color: black;
+
+      span {
+        color: white;
+        font-size: 4rem;
+      }
+    }
+    &__text {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .action {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: block;
+    padding: 5px 10px;
+    color: black;
+    box-shadow: 0 0 2px rgba(57, 70, 78, 0.2);
+  }
+}
 .btn {
   border-radius: 3px;
   border: 1px solid transparent;
-  padding: 10px 15px;
+  padding: 15px 20px;
   background-color: transparent;
   cursor: pointer;
 
-  &__addToCart {
-    border-color: #999999;
-    color: #000;
-
+  &__addToHome {
+    background-color: #4185f4;
+    border-color: #3276e2;
+    color: #fff;
     &:hover {
       box-shadow: 0 0 5px $colorPrimry;
     }

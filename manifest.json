@@ -1,5 +1,6 @@
 {
   "name": "Glossy",
+  "description": "A demo of Progressive Web Application",  
   "short_name": "Glossy",
   "start_url": "index.html",
   "display": "standalone",
